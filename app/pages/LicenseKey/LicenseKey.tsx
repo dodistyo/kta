@@ -74,9 +74,9 @@ const LicenseKey: React.FC<ILogin> = (props) => {
 
           <form css={styles.form} onSubmit={handleSubmit(onSubmitLicense)} noValidate>
             <h4>Masukkan Lisensi</h4>
-            <p>Masukkan lisensi untuk membuka kunci aplikasi admin Kartu Tanda Anggota PKS</p>
+            <p>Masukkan license untuk membuka kunci aplikasi admin Kartu Tanda Anggota PKS</p>
             <FormGroup>
-              <Label required>Lisensi</Label>
+              <Label required>License</Label>
               <Input
                 innerRef={register({
                   required: {
