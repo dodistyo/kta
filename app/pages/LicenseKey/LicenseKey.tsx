@@ -7,12 +7,27 @@ import { useTheme } from 'emotion-theming';
 import { Theme } from '../../components/base/src/theme';
 import createStyles from './LicenseKey.styles';
 import { useAuthDataContext } from 'utils/AuthDataProvider';
+import { ipcRenderer } from 'electron';
 
 // Components & error messages
 import { Button, Input, Label, Panel, FormGroup } from 'kta-ui-components';
 
 // Images
 import logoImg from '../../components/base/src/img/logo-71x100.png';
+
+ipcRenderer.on('message', (event: any, text: any) => {
+
+  console.log('hii')
+  console.log(text)
+
+})
+
+ipcRenderer.on('version', (event: any, text: any) => {
+
+  console.log('versi');
+  console.log(text);
+
+})
 
 type LicenseFormData = {
   license: string;
@@ -38,7 +53,7 @@ const LicenseKey: React.FC<ILogin> = (props) => {
   };
 
   React.useEffect(() => {
-    console.log('errors', errors);
+    // console.log('errors', errors);
   }, [errors]);
 
   return (
