@@ -1,0 +1,19 @@
+{
+  "name": "kta-desktop",
+  "description": "Desktop app KTA PKS.",
+  "productName": "KTA PKS",
+  "private": true,
+  "version": "0.0.2",
+  "main": "dist/main.js",
+  "author": {
+    "name": "Partai Keadilan Sejahtera (PKS)",
+    "email": "humas@pks.id"
+  },
+  "scripts": {
+    "postinstall": "npm rebuild --runtime=electron --target=8.5.0 --disturl=https://atom.io/download/atom-shell --build-from-source"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.0",
+    "typeorm": "0.2.26"
+  }
+}
